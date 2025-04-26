@@ -1,6 +1,6 @@
-Button
 Label
 CanvasLayer
+Button
 CollisionShape2D
 Area2D
 ColorRect

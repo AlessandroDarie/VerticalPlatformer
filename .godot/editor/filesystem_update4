@@ -6,3 +6,4 @@ res://platform.tscn
 res://BasePlatform.tscn
 res://Main.gd
 res://Player.gd
+res://ScoreUI.gd
