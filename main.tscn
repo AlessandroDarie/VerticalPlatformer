@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://v17qnto7eq0a"]
+[gd_scene load_steps=9 format=3 uid="uid://v17qnto7eq0a"]
 
 [ext_resource type="Script" uid="uid://f60rhp1xlcms" path="res://Player.gd" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://cyerfyutemcel" path="res://Main.gd" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://broxr77ido4dd" path="res://platform.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://c820bxiyng5cg" path="res://PlatformSpawner.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dgw8otnktig05" path="res://laser.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b7k2hnvmdsqu" path="res://BasePlatform.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://daa2yw6bsmv01" path="res://GameOverUI.gd" id="6_7mycd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(32, 32)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_272bh")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0xm2m")
@@ -43,3 +47,38 @@ platform_scene = ExtResource("1_ig7tw")
 
 [node name="BasePlatform" parent="." instance=ExtResource("5_lquwl")]
 position = Vector2(0, 300)
+
+[node name="Laser" parent="." instance=ExtResource("5_7mycd")]
+position = Vector2(-240, 400)
+
+[node name="GameOverUI" type="CanvasLayer" parent="."]
+script = ExtResource("6_7mycd")
+
+[node name="Label (GAME OVER)" type="Label" parent="GameOverUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 30.0
+offset_right = 130.0
+offset_bottom = 97.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Game Over"
+horizontal_alignment = 1
+
+[node name="Button (Riprova)" type="Button" parent="GameOverUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -61.0
+offset_right = 34.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Riprova"
+
+[connection signal="pressed" from="GameOverUI/Button (Riprova)" to="GameOverUI" method="_on_button_riprova_pressed"]

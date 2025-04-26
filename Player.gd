@@ -5,7 +5,8 @@ var jump_velocity = -800.0
 var gravity = 900.0
 
 func _physics_process(delta):
-	# Applichiamo la gravità
+	if get_tree().get_root().get_node("Main").is_game_over:
+		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:

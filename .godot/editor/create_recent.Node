@@ -1,7 +1,10 @@
+Button
+Label
+CanvasLayer
 CollisionShape2D
-ColorRect
-StaticBody2D
-Node2D
 Area2D
+ColorRect
+Node2D
+StaticBody2D
 Camera2D
 CharacterBody2D

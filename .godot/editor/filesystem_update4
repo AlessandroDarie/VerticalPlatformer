@@ -1,6 +1,8 @@
 res://main.tscn
+res://GameOverUI.gd
+res://laser.tscn
+res://Laser.gd
 res://platform.tscn
-res://PlatformSpawner.gd
-res://Walls.gd
 res://BasePlatform.tscn
+res://Main.gd
 res://Player.gd

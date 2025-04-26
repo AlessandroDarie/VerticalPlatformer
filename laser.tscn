@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgw8otnktig05"]
+
+[ext_resource type="Script" uid="uid://bm2jejvopei78" path="res://Laser.gd" id="1_fn5yt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oes6l"]
+size = Vector2(480, 10)
+
+[node name="Laser" type="Node2D"]
+script = ExtResource("1_fn5yt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 480.0
+offset_bottom = 10.0
+color = Color(0.988614, 0, 0.283843, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(240, 6)
+shape = SubResource("RectangleShape2D_oes6l")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
