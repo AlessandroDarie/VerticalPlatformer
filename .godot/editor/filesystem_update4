@@ -1,3 +1,6 @@
 res://main.tscn
 res://platform.tscn
 res://PlatformSpawner.gd
+res://Walls.gd
+res://BasePlatform.tscn
+res://Player.gd

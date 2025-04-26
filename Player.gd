@@ -14,7 +14,12 @@ func _physics_process(delta):
 	# Movimento orizzontale
 	var input_direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocity.x = input_direction * speed
-
+	
+	var screen_width = 480
+	if global_position.x < -screen_width / 2:
+		global_position.x = screen_width / 2
+	elif global_position.x > screen_width / 2:
+		global_position.x = -screen_width / 2
 	# Salto
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
