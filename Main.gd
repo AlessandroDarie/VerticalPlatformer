@@ -4,7 +4,7 @@ var is_game_over = false
 
 var base_time_scale = 1.0
 var time_increment = 0.025
-var score_step = 50
+var score_step = 75
 var last_steps = 0
 var max_time_scale = 2.0
 

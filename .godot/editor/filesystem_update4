@@ -1,11 +1,9 @@
+res://Coin.tscn
+res://Coin.gd
 res://main.tscn
-res://GameOverUI.gd
-res://laser.tscn
-res://Laser.gd
+res://Main.gd
+res://PlatformSpawner.gd
 res://platform.tscn
 res://BasePlatform.tscn
-res://Main.gd
-res://Player.gd
+res://laser.tscn
 res://ScoreUI.gd
-res://PlatformSpawner.gd
-res://Walls.gd
