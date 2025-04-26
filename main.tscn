@@ -22,6 +22,8 @@ offset_bottom = 16.0
 shape = SubResource("RectangleShape2D_7dm0k")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+limit_left = -240
+limit_right = 240
 
 [node name="Platform" parent="." instance=ExtResource("1_ig7tw")]
 position = Vector2(0, 100)

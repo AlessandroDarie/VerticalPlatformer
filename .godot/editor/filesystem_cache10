@@ -1,0 +1,8 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1745688185
+icon.svg::CompressedTexture2D/CompressedTexture2D::6837078691632401661::1745684599::1745684605::1::::<><><>0<>0<>3aaf969f12f17075469f539fecbe2468<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+main.tscn::PackedScene::1529611767309110450::1745688124::0::1::::<><><>0<>0<><>::uid://f60rhp1xlcms::::res://Player.gd<>uid://broxr77ido4dd::::res://platform.tscn<>uid://c820bxiyng5cg::::res://PlatformSpawner.gd
+Platform.gd::GDScript::3626862046638619561::1745687599::0::1::::<>StaticBody2D<><>0<>0<><>::
+platform.tscn::PackedScene::3609960893975522557::1745688124::0::1::::<><><>0<>0<><>::uid://brw45gsvbfstd::::res://Platform.gd
+PlatformSpawner.gd::GDScript::7146332338917532994::1745688047::0::1::::<>Node2D<><>0<>0<><>::
+Player.gd::GDScript::416488603929568890::1745686395::0::1::::<>CharacterBody2D<><>0<>0<><>::
