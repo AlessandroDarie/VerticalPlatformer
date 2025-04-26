@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://v17qnto7eq0a"]
+
+[ext_resource type="Script" uid="uid://f60rhp1xlcms" path="res://Player.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://broxr77ido4dd" path="res://platform.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://c820bxiyng5cg" path="res://PlatformSpawner.gd" id="3_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+size = Vector2(32, 32)
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_0xm2m")
+
+[node name="ColorRect" type="ColorRect" parent="Player"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_7dm0k")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Platform" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(0, 100)
+
+[node name="Platform2" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(-80, -150)
+
+[node name="Platform3" parent="." instance=ExtResource("1_ig7tw")]
+position = Vector2(90, -400)
+
+[node name="PlatformSpawner" type="Node2D" parent="."]
+script = ExtResource("3_h2yge")
+platform_scene = ExtResource("1_ig7tw")
