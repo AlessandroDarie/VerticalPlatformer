@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var player: NodePath  # Colleghiamo il Player
+@export var player: NodePath
 
 func _process(delta):
 	if player:

@@ -51,6 +51,7 @@ position = Vector2(0, 300)
 
 [node name="Laser" parent="." instance=ExtResource("5_7mycd")]
 position = Vector2(-240, 400)
+player = NodePath("../Player")
 
 [node name="GameOverUI" type="CanvasLayer" parent="."]
 script = ExtResource("6_7mycd")

@@ -2,7 +2,7 @@ extends Node2D
 
 @export var platform_scene: PackedScene
 
-var platform_gap = 750  # distanza tra piattaforme generate
+var platform_gap = 750
 
 func on_platform_reached(current_platform_y):
 	var new_platform = platform_scene.instantiate()

@@ -7,3 +7,5 @@ res://BasePlatform.tscn
 res://Main.gd
 res://Player.gd
 res://ScoreUI.gd
+res://PlatformSpawner.gd
+res://Walls.gd

@@ -11,11 +11,10 @@ func _ready():
 
 func _process(delta):
 	if get_tree().get_root().get_node("Main").is_game_over:
-		return  # Se è Game Over non aggiorniamo più
+		return
 
 	if player:
 		var player_node = get_node(player)
-		# Siccome Y diminuisce salendo, usiamo -Y
 		var current_height = int(-player_node.global_position.y / 10) - 3
 		
 		if current_height > max_height:
@@ -32,7 +31,6 @@ func load_highscore():
 		highscore = int(file.get_line())
 		file.close()
 	
-	# Aggiorna subito il testo del record
 	$RecordLabel.text = "Record: " + str(highscore)
 
 
