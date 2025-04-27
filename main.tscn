@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://v17qnto7eq0a"]
+[gd_scene load_steps=12 format=3 uid="uid://v17qnto7eq0a"]
 
 [ext_resource type="Script" uid="uid://f60rhp1xlcms" path="res://Player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cyerfyutemcel" path="res://Main.gd" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://broxr77ido4dd" path="res://platform.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://d3at17lolgq02" path="res://PauseUI.gd" id="3_4c57u"]
 [ext_resource type="Script" uid="uid://c820bxiyng5cg" path="res://PlatformSpawner.gd" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dgw8otnktig05" path="res://laser.tscn" id="5_7mycd"]
 [ext_resource type="PackedScene" uid="uid://do07iv763nvvs" path="res://Coin.tscn" id="5_kek77"]
@@ -17,6 +18,7 @@ size = Vector2(32, 32)
 script = ExtResource("1_272bh")
 
 [node name="GameOverUI" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("6_7mycd")
 
 [node name="Label (GAME OVER)" type="Label" parent="GameOverUI"]
@@ -32,46 +34,146 @@ theme_override_font_sizes/font_size = 48
 text = "Game Over"
 horizontal_alignment = 1
 
-[node name="Button (Riprova)" type="Button" parent="GameOverUI"]
+[node name="Button (Restart)" type="Button" parent="GameOverUI"]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -34.0
-offset_top = -81.0
-offset_right = 34.0
-offset_bottom = -50.0
+offset_left = -183.0
+offset_top = -113.0
+offset_right = -57.0
+offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Riprova"
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+
+[node name="Button (Menu)" type="Button" parent="GameOverUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 57.0
+offset_top = -113.0
+offset_right = 183.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Menu"
+
+[node name="PauseUI" type="CanvasLayer" parent="."]
+process_mode = 2
+visible = false
+script = ExtResource("3_4c57u")
+
+[node name="Label (Paused)" type="Label" parent="PauseUI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_top = 70.0
+offset_right = 130.0
+offset_bottom = 137.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="Button (Continue)" type="Button" parent="PauseUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -194.5
+offset_top = -186.0
+offset_right = -45.5
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+
+[node name="Button (Restart)" type="Button" parent="PauseUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -194.5
+offset_top = -113.0
+offset_right = -45.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Restart"
+
+[node name="Button (Options)" type="Button" parent="PauseUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 45.5
+offset_top = -186.0
+offset_right = 194.5
+offset_bottom = -133.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="Button (Menu)" type="Button" parent="PauseUI"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 45.5
+offset_top = -113.0
+offset_right = 194.5
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Menu"
 
 [node name="ScoreUI" type="CanvasLayer" parent="."]
 script = ExtResource("8_5vw27")
 player = NodePath("../Player")
 
 [node name="TopBar" type="ColorRect" parent="ScoreUI"]
-offset_right = 480.0
+anchors_preset = 10
+anchor_right = 1.0
 offset_bottom = 35.0
+grow_horizontal = 2
 color = Color(0.840879, 1, 0.5297, 1)
 
 [node name="BottomBar" type="ColorRect" parent="ScoreUI"]
-offset_top = 765.0
-offset_right = 480.0
-offset_bottom = 800.0
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
 color = Color(0.840879, 1, 0.5297, 1)
 
 [node name="Label" type="Label" parent="ScoreUI"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
+offset_left = 80.0
 offset_top = -34.0
-offset_right = 153.0
+offset_right = 223.0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-text = "Punteggio: 0"
+text = "Score: 0"
 
 [node name="RecordLabel" type="Label" parent="ScoreUI"]
 anchors_preset = 3
@@ -79,9 +181,9 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -118.0
+offset_left = -160.0
 offset_top = -34.0
-offset_right = -10.0
+offset_right = -52.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -89,24 +191,35 @@ theme_override_font_sizes/font_size = 24
 text = "Record: 0"
 
 [node name="CoinsLabel" type="Label" parent="ScoreUI"]
-offset_left = 10.0
-offset_right = 100.0
+offset_left = 80.0
+offset_right = 170.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-text = "Coins: 0"
 
 [node name="CoinsTotalLabel" type="Label" parent="ScoreUI"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -164.0
-offset_right = -10.0
+offset_left = -160.0
+offset_right = -6.0
 offset_bottom = 34.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-text = "Total Coins: 0"
+text = "Coins: 0"
+
+[node name="Button (Pause)" type="Button" parent="ScoreUI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -52.0
+offset_top = 59.0
+offset_right = -20.0
+offset_bottom = 98.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 22
+text = "||"
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0xm2m")
@@ -147,4 +260,10 @@ position = Vector2(0, 300)
 position = Vector2(-240, 265)
 player = NodePath("../Player")
 
-[connection signal="pressed" from="GameOverUI/Button (Riprova)" to="GameOverUI" method="_on_button_riprova_pressed"]
+[connection signal="pressed" from="GameOverUI/Button (Restart)" to="GameOverUI" method="_on_button_restart_pressed"]
+[connection signal="pressed" from="GameOverUI/Button (Menu)" to="GameOverUI" method="_on_button_menu_pressed"]
+[connection signal="pressed" from="PauseUI/Button (Continue)" to="PauseUI" method="_on_button_continue_pressed"]
+[connection signal="pressed" from="PauseUI/Button (Restart)" to="PauseUI" method="_on_button_restart_pressed"]
+[connection signal="pressed" from="PauseUI/Button (Options)" to="PauseUI" method="_on_button_options_pressed"]
+[connection signal="pressed" from="PauseUI/Button (Menu)" to="PauseUI" method="_on_button_menu_pressed"]
+[connection signal="pressed" from="ScoreUI/Button (Pause)" to="." method="_on_button_pause_pressed"]

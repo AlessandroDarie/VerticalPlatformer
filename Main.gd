@@ -6,7 +6,7 @@ var base_time_scale = 1.0
 var time_increment = 0.025
 var score_step = 75
 var last_steps = 0
-var max_time_scale = 2.0
+var max_time_scale = 3.0
 
 func set_game_over():
 	is_game_over = true
@@ -29,3 +29,7 @@ func update_time_scale():
 				if Engine.time_scale > max_time_scale:
 					Engine.time_scale = max_time_scale
 				print("Time scale increased! New time_scale:", Engine.time_scale)
+
+
+func _on_button_pause_pressed():
+	$PauseUI.show_pause()

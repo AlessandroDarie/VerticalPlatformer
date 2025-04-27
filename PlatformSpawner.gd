@@ -17,6 +17,27 @@ func on_platform_reached(current_platform_y):
 	var y_position = current_platform_y - platform_gap
 
 	new_platform.global_position = Vector2(x_position, y_position)
+	
+	var main = get_tree().get_root().get_node("Main")
+	var score_ui = main.get_node("ScoreUI")
+	var score_text = score_ui.get_node("Label").text
+	var score = int(score_text.replace("Punteggio: ", ""))
+
+	var shrink_factor = clamp(score / 5000.0, 0, 0.7)
+	var base_width = 120.0
+
+	if shrink_factor > 0:
+		if new_platform.has_node("ColorRect"):
+			var color_rect = new_platform.get_node("ColorRect")
+			color_rect.size.x = base_width * (1.0 - shrink_factor)
+			color_rect.position.x = -(color_rect.size.x / 2)
+
+		if new_platform.has_node("CollisionShape2D"):
+			var collision = new_platform.get_node("CollisionShape2D")
+			if collision.shape is RectangleShape2D:
+				var rect_shape = collision.shape
+				rect_shape.size.x = base_width * (1.0 - shrink_factor)
+				
 	spawn_coin(y_position)
 	
 func spawn_coin(y_reference):

@@ -1,10 +1,12 @@
-ColorRect
+Button
 Label
+CanvasLayer
+Control
+TouchScreenButton
+ColorRect
 CollisionShape2D
 Sprite2D
 Area2D
-CanvasLayer
-Button
 Node2D
 StaticBody2D
 Camera2D

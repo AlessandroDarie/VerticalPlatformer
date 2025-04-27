@@ -5,6 +5,9 @@ var jump_velocity = -800.0
 var gravity = 900.0
 var is_ready_to_jump = false
 
+var move_left = false
+var move_right = false
+
 func _physics_process(delta):
 	if get_tree().get_root().get_node("Main").is_game_over:
 		return
@@ -16,6 +19,12 @@ func _physics_process(delta):
 		is_ready_to_jump = true
 
 	var input_direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	
+	if move_right:
+		input_direction += 1
+	if move_left:
+		input_direction -= 1
+		
 	velocity.x = input_direction * speed
 	
 	var screen_width = 480
@@ -32,3 +41,20 @@ func _physics_process(delta):
 
 func _on_area_entered(area):
 	print("Player entered area:", area.name)
+	
+func _input(event):
+	if event is InputEventMouseButton and event.pressed:
+		var screen_center = get_viewport().get_visible_rect().size.x / 2
+		if event.position.x < screen_center:
+			move_left = true
+			move_right = false
+			print("Tocco a sinistra")
+		else:
+			move_right = true
+			move_left = false
+			print("Tocco a destra")
+
+	if event is InputEventMouseButton and not event.pressed:
+		move_left = false
+		move_right = false
+		print("Rilascio")

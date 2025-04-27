@@ -23,7 +23,7 @@ func _process(delta):
 		
 		if current_height > max_height:
 			max_height = current_height
-			$Label.text = "Punteggio: " + str(max_height)
+			$Label.text = "Score: " + str(max_height)
 			
 			if max_height > highscore:
 				highscore = max_height
@@ -31,8 +31,7 @@ func _process(delta):
 
 	var main = get_tree().get_root().get_node("Main")
 	if main:
-		$CoinsLabel.text = "Monete partita: " + str(coins_in_game)
-		$CoinsTotalLabel.text = "Monete totali: " + str(coins_total)
+		$CoinsTotalLabel.text = "Coins: " + str(coins_total)
 
 func load_highscore():
 	if FileAccess.file_exists("user://highscore.save"):

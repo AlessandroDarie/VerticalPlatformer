@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://da6bc35fhymlu"]
+
+[ext_resource type="Script" uid="uid://02sccbvhnjhh" path="res://MainMenu.gd" id="1_06t4h"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_06t4h")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 40.0
+offset_right = 420.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 45
+text = "VERTICAL 
+PLATFORMER"
+horizontal_alignment = 1
+
+[node name="Button _Play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 290.0
+offset_right = 276.0
+offset_bottom = 343.0
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="Button _Options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 360.0
+offset_right = 305.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="Button _Shop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 197.5
+offset_top = 430.0
+offset_right = 282.5
+offset_bottom = 483.0
+theme_override_font_sizes/font_size = 32
+text = "Shop
+"
+
+[node name="Button _Customize" type="Button" parent="."]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 500.0
+offset_right = 325.0
+offset_bottom = 553.0
+theme_override_font_sizes/font_size = 32
+text = "Customize"
+
+[node name="Button _Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 700.0
+offset_right = 279.0
+offset_bottom = 753.0
+theme_override_font_sizes/font_size = 32
+text = "Quit
+"
+
+[connection signal="pressed" from="Button _Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button _Quit" to="." method="_on_button__quit_pressed"]
