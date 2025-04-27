@@ -13,6 +13,14 @@ offset_right = 480.0
 offset_bottom = 10.0
 color = Color(0.988614, 0, 0.283843, 1)
 
+[node name="LaserTop" type="Line2D" parent="."]
+points = PackedVector2Array(0, 0, 480, 0)
+width = 3.0
+
+[node name="LaserBottom" type="Line2D" parent="."]
+points = PackedVector2Array(0, 10, 480, 10)
+width = 3.0
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

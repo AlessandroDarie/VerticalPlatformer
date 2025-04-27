@@ -1,12 +1,6 @@
+res://main_menu.tscn
 res://main.tscn
 res://platform.tscn
 res://BasePlatform.tscn
 res://laser.tscn
 res://Coin.tscn
-res://ScoreUI.gd
-res://main_menu.tscn
-res://MainMenu.gd
-res://Main.gd
-res://GameOverUI.gd
-res://PauseUI.gd
-res://PlatformSpawner.gd

@@ -1,6 +1,77 @@
-[gd_scene load_steps=2 format=3 uid="uid://da6bc35fhymlu"]
+[gd_scene load_steps=8 format=3 uid="uid://da6bc35fhymlu"]
 
 [ext_resource type="Script" uid="uid://02sccbvhnjhh" path="res://MainMenu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://wo5whln2yknq" path="res://assets/background/background3.png" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jix8l"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glbon"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nlkkf"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -15,6 +86,9 @@ offset_left = 60.0
 offset_top = 40.0
 offset_right = 420.0
 offset_bottom = 85.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 45
 text = "VERTICAL 
 PLATFORMER"
@@ -26,7 +100,11 @@ offset_left = 204.0
 offset_top = 290.0
 offset_right = 276.0
 offset_bottom = 343.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
 text = "Play"
 
 [node name="Button _Options" type="Button" parent="."]
@@ -35,7 +113,11 @@ offset_left = 175.0
 offset_top = 360.0
 offset_right = 305.0
 offset_bottom = 413.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu7sn")
 text = "Options"
 
 [node name="Button _Shop" type="Button" parent="."]
@@ -44,7 +126,11 @@ offset_left = 197.5
 offset_top = 430.0
 offset_right = 282.5
 offset_bottom = 483.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_jix8l")
 text = "Shop
 "
 
@@ -54,7 +140,11 @@ offset_left = 155.0
 offset_top = 500.0
 offset_right = 325.0
 offset_bottom = 553.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_glbon")
 text = "Customize"
 
 [node name="Button _Quit" type="Button" parent="."]
@@ -63,9 +153,21 @@ offset_left = 204.0
 offset_top = 700.0
 offset_right = 279.0
 offset_bottom = 753.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_nlkkf")
 text = "Quit
 "
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(233, 407)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("2_7vrkn")
 
 [connection signal="pressed" from="Button _Play" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button _Quit" to="." method="_on_button__quit_pressed"]

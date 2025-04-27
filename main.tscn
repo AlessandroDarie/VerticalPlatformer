@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://v17qnto7eq0a"]
+[gd_scene load_steps=19 format=3 uid="uid://v17qnto7eq0a"]
 
 [ext_resource type="Script" uid="uid://f60rhp1xlcms" path="res://Player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cyerfyutemcel" path="res://Main.gd" id="1_272bh"]
@@ -10,6 +10,91 @@
 [ext_resource type="PackedScene" uid="uid://b7k2hnvmdsqu" path="res://BasePlatform.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://daa2yw6bsmv01" path="res://GameOverUI.gd" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://dxxk5npo78jqx" path="res://ScoreUI.gd" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://wo5whln2yknq" path="res://assets/background/background3.png" id="11_efxa6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+bg_color = Color(0, 0, 0, 0.521569)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+bg_color = Color(0, 0, 0, 0.521569)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycdy4"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w48qg"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vivmo"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cqfq"]
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0, 1, 1, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+expand_margin_right = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(32, 32)
@@ -29,6 +114,9 @@ offset_top = 70.0
 offset_right = 130.0
 offset_bottom = 137.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 48
 text = "Game Over"
 horizontal_alignment = 1
@@ -45,7 +133,11 @@ offset_right = -57.0
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_efxa6")
 text = "Restart"
 
 [node name="Button (Menu)" type="Button" parent="GameOverUI"]
@@ -60,7 +152,11 @@ offset_right = 183.0
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
 text = "Menu"
 
 [node name="PauseUI" type="CanvasLayer" parent="."]
@@ -76,6 +172,9 @@ offset_top = 70.0
 offset_right = 130.0
 offset_bottom = 137.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 48
 text = "Paused"
 horizontal_alignment = 1
@@ -92,7 +191,11 @@ offset_right = -45.5
 offset_bottom = -133.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_ycdy4")
 text = "Continue"
 
 [node name="Button (Restart)" type="Button" parent="PauseUI"]
@@ -107,7 +210,11 @@ offset_right = -45.5
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_w48qg")
 text = "Restart"
 
 [node name="Button (Options)" type="Button" parent="PauseUI"]
@@ -122,7 +229,10 @@ offset_right = 194.5
 offset_bottom = -133.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_vivmo")
 text = "Options"
 
 [node name="Button (Menu)" type="Button" parent="PauseUI"]
@@ -137,7 +247,10 @@ offset_right = 194.5
 offset_bottom = -60.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_2cqfq")
 text = "Menu"
 
 [node name="ScoreUI" type="CanvasLayer" parent="."]
@@ -149,7 +262,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 35.0
 grow_horizontal = 2
-color = Color(0.840879, 1, 0.5297, 1)
+color = Color(0, 1, 1, 1)
 
 [node name="BottomBar" type="ColorRect" parent="ScoreUI"]
 anchors_preset = 12
@@ -159,7 +272,7 @@ anchor_bottom = 1.0
 offset_top = -35.0
 grow_horizontal = 2
 grow_vertical = 0
-color = Color(0.840879, 1, 0.5297, 1)
+color = Color(0, 1, 1, 1)
 
 [node name="Label" type="Label" parent="ScoreUI"]
 anchors_preset = 2
@@ -169,7 +282,9 @@ offset_left = 80.0
 offset_top = -34.0
 offset_right = 223.0
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 24
 text = "Score: 0"
 
@@ -184,7 +299,9 @@ offset_top = -34.0
 offset_right = -52.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 24
 text = "Record: 0"
 
@@ -192,7 +309,9 @@ text = "Record: 0"
 offset_left = 80.0
 offset_right = 170.0
 offset_bottom = 34.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 24
 
 [node name="CoinsTotalLabel" type="Label" parent="ScoreUI"]
@@ -203,7 +322,9 @@ offset_left = -160.0
 offset_right = -6.0
 offset_bottom = 34.0
 grow_horizontal = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 24
 text = "Coins: 0"
 
@@ -216,6 +337,9 @@ offset_top = 59.0
 offset_right = -20.0
 offset_bottom = 98.0
 grow_horizontal = 0
+theme_override_colors/font_hover_color = Color(0, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 22
 text = "||"
 
@@ -223,11 +347,19 @@ text = "||"
 script = ExtResource("1_0xm2m")
 
 [node name="ColorRect" type="ColorRect" parent="Player"]
+visible = false
 offset_left = -16.0
 offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 16.0
 color = Color(0.660419, 1, 0.598604, 1)
+
+[node name="Line2D" type="Line2D" parent="Player"]
+points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16, -16, -16, 16, -16)
+width = 4.0
+default_color = Color(0, 1, 1, 1)
+joint_mode = 2
+antialiased = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("RectangleShape2D_7dm0k")
@@ -257,6 +389,14 @@ position = Vector2(0, 300)
 [node name="Laser" parent="." instance=ExtResource("5_7mycd")]
 position = Vector2(-240, 265)
 player = NodePath("../Player")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(233, 407)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("11_efxa6")
 
 [connection signal="pressed" from="GameOverUI/Button (Restart)" to="GameOverUI" method="_on_button_restart_pressed"]
 [connection signal="pressed" from="GameOverUI/Button (Menu)" to="GameOverUI" method="_on_button_menu_pressed"]

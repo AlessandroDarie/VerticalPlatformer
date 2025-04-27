@@ -12,11 +12,18 @@ size = Vector2(120, 20)
 script = ExtResource("1_mi635")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -60.0
 offset_top = -10.0
 offset_right = 60.0
 offset_bottom = 10.0
 color = Color(0, 0.47189, 0.00442813, 1)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-58, -8, 58, -8, 58, 8, -58, 8, -58, -8, 58, -8)
+width = 4.0
+joint_mode = 2
+antialiased = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5ajho")

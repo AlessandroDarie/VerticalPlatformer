@@ -27,6 +27,8 @@ func on_platform_reached(current_platform_y):
 	var base_width = 120.0
 
 	if shrink_factor > 0:
+		var new_width = base_width * (1.0 - shrink_factor)
+		
 		if new_platform.has_node("ColorRect"):
 			var color_rect = new_platform.get_node("ColorRect")
 			color_rect.size.x = base_width * (1.0 - shrink_factor)
@@ -38,6 +40,17 @@ func on_platform_reached(current_platform_y):
 				var rect_shape = collision.shape
 				rect_shape.size.x = base_width * (1.0 - shrink_factor)
 				
+		if new_platform.has_node("Line2D"):
+			var line = new_platform.get_node("Line2D")
+			line.points = [
+				Vector2(-new_width/2, -8),
+				Vector2(new_width/2, -8),
+				Vector2(new_width/2, 8),
+				Vector2(-new_width/2, 8),
+				Vector2(-new_width/2, -8),
+				Vector2(new_width/2, -8)
+			]
+
 	spawn_coin(y_position)
 	
 func spawn_coin(y_reference):
