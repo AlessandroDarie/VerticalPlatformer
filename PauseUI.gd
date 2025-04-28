@@ -12,18 +12,22 @@ func hide_pause():
 	get_tree().paused = false
 
 func _on_button_continue_pressed():
+	await get_tree().create_timer(0.3).timeout
 	hide_pause()
 
 
 func _on_button_restart_pressed():
+	await get_tree().create_timer(0.3).timeout
 	hide_pause()
 	get_tree().reload_current_scene()
 
 
 func _on_button_options_pressed():
+	await get_tree().create_timer(0.3).timeout
 	print("Options clicked!") # Placeholder
 
 
 func _on_button_menu_pressed():
+	await get_tree().create_timer(0.3).timeout
 	hide_pause()
 	get_tree().change_scene_to_file("res://main_menu.tscn")

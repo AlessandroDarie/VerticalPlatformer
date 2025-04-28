@@ -11,9 +11,9 @@ var max_time_scale = 3.0
 func set_game_over():
 	is_game_over = true
 	Engine.time_scale = 1.0
-	if has_node("ScoreUI/Button (Pause)"):
-		$"ScoreUI/Button (Pause)".disabled = true
-		$"ScoreUI/Button (Pause)".visible = false
+	if has_node("ScoreUI/Button_Pause"):
+		$"ScoreUI/Button_Pause".disabled = true
+		$"ScoreUI/Button_Pause".visible = false
 
 func _process(delta):
 	if not is_game_over:

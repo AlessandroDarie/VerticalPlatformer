@@ -8,15 +8,31 @@ var is_ready_to_jump = false
 var move_left = false
 var move_right = false
 
+@onready var jump_sound = $JumpSound
+@onready var jump_sound_2 = $JumpSound2
+@onready var fall_sound = $FallSound
+var last_jump_sound = 0
+var jump_start_y = 0.0
+var is_falling_sound_played = false
+
 func _physics_process(delta):
 	if get_tree().get_root().get_node("Main").is_game_over:
 		return
 
 	if not is_on_floor():
 		velocity.y += gravity * delta
+		
+		if velocity.y > 0:
+			var fallen_distance = global_position.y - jump_start_y
+			if fallen_distance > 200 and not is_falling_sound_played:
+				if fall_sound:
+					fall_sound.play()
+					is_falling_sound_played = true
+
 	else:
 		velocity.y = 0
 		is_ready_to_jump = true
+		is_falling_sound_played = false
 
 	var input_direction = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	
@@ -36,6 +52,16 @@ func _physics_process(delta):
 	if is_ready_to_jump:
 		velocity.y = jump_velocity
 		is_ready_to_jump = false
+		jump_start_y = global_position.y
+		is_falling_sound_played = false
+		if last_jump_sound == 0:
+			if jump_sound:
+				jump_sound.play()
+			last_jump_sound = 1
+		else:
+			if jump_sound_2:
+				jump_sound_2.play()
+			last_jump_sound = 0
 
 	move_and_slide()
 

@@ -1,12 +1,11 @@
-res://Coin.tscn
 res://main.tscn
 res://platform.tscn
 res://BasePlatform.tscn
 res://laser.tscn
+res://Coin.tscn
 res://main_menu.tscn
 res://ButtonBase.tscn
-res://ButtonBase.gd
-res://PlayButton.tscn
-res://MainMenu.gd
-res://GameOverUI.gd
-res://PauseUI.gd
+res://Laser.gd
+res://Player.gd
+res://ScoreUI.gd
+res://Main.gd

@@ -1,3 +1,4 @@
+AudioStreamPlayer
 Button
 Sprite2D
 Node2D
@@ -11,4 +12,3 @@ ColorRect
 CollisionShape2D
 Area2D
 StaticBody2D
-Camera2D

@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgw8otnktig05"]
+[gd_scene load_steps=5 format=3 uid="uid://dgw8otnktig05"]
 
 [ext_resource type="Script" uid="uid://bm2jejvopei78" path="res://Laser.gd" id="1_fn5yt"]
+[ext_resource type="AudioStream" uid="uid://bid1exkfvioho" path="res://assets/audio/sci-fi/Audio/laserRetro_001.ogg" id="2_6vqwg"]
+[ext_resource type="AudioStream" uid="uid://jn2p04ah7wh2" path="res://assets/audio/sci-fi/Audio/spaceEngine_002.ogg" id="3_g6b45"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oes6l"]
 size = Vector2(480, 150)
@@ -26,5 +28,13 @@ width = 3.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(240, 75)
 shape = SubResource("RectangleShape2D_oes6l")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6vqwg")
+volume_db = -20.0
+
+[node name="WarningSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g6b45")
+volume_db = -20.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
