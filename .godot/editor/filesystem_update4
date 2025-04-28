@@ -1,3 +1,4 @@
+res://OptionsMenu.tscn
 res://main.tscn
 res://platform.tscn
 res://BasePlatform.tscn
@@ -5,7 +6,4 @@ res://laser.tscn
 res://Coin.tscn
 res://main_menu.tscn
 res://ButtonBase.tscn
-res://Laser.gd
-res://Player.gd
-res://ScoreUI.gd
-res://Main.gd
+res://MainMenu.gd

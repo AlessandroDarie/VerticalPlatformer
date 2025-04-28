@@ -47,7 +47,6 @@ offset_left = 175.0
 offset_top = 360.0
 offset_right = 305.0
 offset_bottom = 413.0
-disabled = true
 text = "Options
 "
 
@@ -81,4 +80,5 @@ text = "Quit
 "
 
 [connection signal="pressed" from="Button_Play" to="." method="_on_button_play_pressed"]
+[connection signal="pressed" from="Button_Options" to="." method="_on_button_options_pressed"]
 [connection signal="pressed" from="Button_Quit" to="." method="_on_button_quit_pressed"]

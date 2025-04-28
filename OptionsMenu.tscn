@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://ls7yj1faalqm"]
+
+[ext_resource type="PackedScene" uid="uid://bomld5pc5iw4l" path="res://ButtonBase.tscn" id="1_58l1r"]
+[ext_resource type="Script" uid="uid://d1il12yroa8wq" path="res://OptionsMenu.gd" id="1_pjigs"]
+[ext_resource type="Texture2D" uid="uid://wo5whln2yknq" path="res://assets/background/background3.png" id="3_ahw8u"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pjigs")
+
+[node name="TitleLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 119.5
+offset_top = 59.0
+offset_right = 360.5
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 45
+text = "OPTIONS
+"
+horizontal_alignment = 1
+
+[node name="SFXLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 300.0
+offset_right = 140.0
+offset_bottom = 429.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 45
+text = "SFX
+"
+horizontal_alignment = 1
+
+[node name="SFXVolumeSlider" type="HSlider" parent="."]
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+offset_left = 40.0
+offset_top = 350.0
+offset_right = 240.0
+offset_bottom = 400.0
+scale = Vector2(2, 2)
+min_value = -40.0
+max_value = 0.0
+
+[node name="MusicLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 450.0
+offset_right = 167.0
+offset_bottom = 579.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 45
+text = "MUSIC
+"
+horizontal_alignment = 1
+
+[node name="MusicVolumeSlider" type="HSlider" parent="."]
+layout_mode = 2
+offset_left = 40.0
+offset_top = 500.0
+offset_right = 240.0
+offset_bottom = 550.0
+scale = Vector2(2, 2)
+min_value = -40.0
+max_value = 0.0
+
+[node name="Button_Back" parent="." instance=ExtResource("1_58l1r")]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 680.5
+offset_right = 303.0
+offset_bottom = 737.5
+text = "Back
+"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(233, 407)
+texture = ExtResource("3_ahw8u")
+
+[connection signal="pressed" from="Button_Back" to="." method="_on_button_back_pressed"]
