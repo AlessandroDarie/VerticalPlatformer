@@ -1,100 +1,18 @@
-[gd_scene load_steps=19 format=3 uid="uid://v17qnto7eq0a"]
+[gd_scene load_steps=15 format=3 uid="uid://v17qnto7eq0a"]
 
 [ext_resource type="Script" uid="uid://f60rhp1xlcms" path="res://Player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://cyerfyutemcel" path="res://Main.gd" id="1_272bh"]
 [ext_resource type="PackedScene" uid="uid://broxr77ido4dd" path="res://platform.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://d3at17lolgq02" path="res://PauseUI.gd" id="3_4c57u"]
 [ext_resource type="Script" uid="uid://c820bxiyng5cg" path="res://PlatformSpawner.gd" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bomld5pc5iw4l" path="res://ButtonBase.tscn" id="3_ycdy4"]
 [ext_resource type="PackedScene" uid="uid://dgw8otnktig05" path="res://laser.tscn" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cfole3wtc4lg5" path="res://assets/coins/coin_128x128.png" id="5_dg77c"]
 [ext_resource type="PackedScene" uid="uid://do07iv763nvvs" path="res://Coin.tscn" id="5_kek77"]
 [ext_resource type="PackedScene" uid="uid://b7k2hnvmdsqu" path="res://BasePlatform.tscn" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://daa2yw6bsmv01" path="res://GameOverUI.gd" id="6_7mycd"]
 [ext_resource type="Script" uid="uid://dxxk5npo78jqx" path="res://ScoreUI.gd" id="8_5vw27"]
 [ext_resource type="Texture2D" uid="uid://wo5whln2yknq" path="res://assets/background/background3.png" id="11_efxa6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
-bg_color = Color(0, 0, 0, 0.521569)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
-bg_color = Color(0, 0, 0, 0.521569)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ycdy4"]
-bg_color = Color(0, 0, 0, 0.6)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w48qg"]
-bg_color = Color(0, 0, 0, 0.6)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vivmo"]
-bg_color = Color(0, 0, 0, 0.6)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 10.0
-expand_margin_right = 10.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cqfq"]
-bg_color = Color(0, 0, 0, 0.6)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(0, 1, 1, 1)
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 25
-corner_radius_bottom_left = 25
-expand_margin_left = 10.0
-expand_margin_right = 10.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(32, 32)
@@ -121,43 +39,21 @@ theme_override_font_sizes/font_size = 48
 text = "Game Over"
 horizontal_alignment = 1
 
-[node name="Button (Restart)" type="Button" parent="GameOverUI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -183.0
-offset_top = -113.0
-offset_right = -57.0
-offset_bottom = -60.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_efxa6")
-text = "Restart"
-
-[node name="Button (Menu)" type="Button" parent="GameOverUI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
+[node name="Button_Restart" parent="GameOverUI" instance=ExtResource("3_ycdy4")]
 offset_left = 57.0
-offset_top = -113.0
+offset_top = 683.0
 offset_right = 183.0
-offset_bottom = -60.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_dg77c")
-text = "Menu"
+offset_bottom = 740.0
+text = "Restart
+"
+
+[node name="Button_Menu" parent="GameOverUI" instance=ExtResource("3_ycdy4")]
+offset_left = 297.0
+offset_top = 683.0
+offset_right = 423.0
+offset_bottom = 740.0
+text = "Menu
+"
 
 [node name="PauseUI" type="CanvasLayer" parent="."]
 process_mode = 2
@@ -179,79 +75,38 @@ theme_override_font_sizes/font_size = 48
 text = "Paused"
 horizontal_alignment = 1
 
-[node name="Button (Continue)" type="Button" parent="PauseUI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -194.5
-offset_top = -186.0
-offset_right = -45.5
-offset_bottom = -133.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_ycdy4")
-text = "Continue"
+[node name="Button_Menu" parent="PauseUI" instance=ExtResource("3_ycdy4")]
+offset_left = 283.5
+offset_top = 683.0
+offset_right = 436.5
+offset_bottom = 740.0
+text = "Menu
+"
 
-[node name="Button (Restart)" type="Button" parent="PauseUI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -194.5
-offset_top = -113.0
-offset_right = -45.5
-offset_bottom = -60.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_w48qg")
-text = "Restart"
+[node name="Button_Restart" parent="PauseUI" instance=ExtResource("3_ycdy4")]
+offset_left = 43.5
+offset_top = 683.0
+offset_right = 196.5
+offset_bottom = 740.0
+text = "Restart
+"
 
-[node name="Button (Options)" type="Button" parent="PauseUI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 45.5
-offset_top = -186.0
-offset_right = 194.5
-offset_bottom = -133.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_vivmo")
-text = "Options"
+[node name="Button_Continue" parent="PauseUI" instance=ExtResource("3_ycdy4")]
+offset_left = 43.5
+offset_top = 610.0
+offset_right = 196.5
+offset_bottom = 667.0
+text = "Continue
+"
 
-[node name="Button (Menu)" type="Button" parent="PauseUI"]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 45.5
-offset_top = -113.0
-offset_right = 194.5
-offset_bottom = -60.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = SubResource("StyleBoxFlat_2cqfq")
-text = "Menu"
+[node name="Button_Options" parent="PauseUI" instance=ExtResource("3_ycdy4")]
+offset_left = 283.5
+offset_top = 610.0
+offset_right = 436.5
+offset_bottom = 667.0
+disabled = true
+text = "Options
+"
 
 [node name="ScoreUI" type="CanvasLayer" parent="."]
 script = ExtResource("8_5vw27")
@@ -318,15 +173,15 @@ theme_override_font_sizes/font_size = 24
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -160.0
-offset_right = -6.0
+offset_left = -120.0
+offset_right = -106.0
 offset_bottom = 34.0
 grow_horizontal = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 24
-text = "Coins: 0"
+text = "0"
 
 [node name="Button (Pause)" type="Button" parent="ScoreUI"]
 anchors_preset = 1
@@ -342,6 +197,11 @@ theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 22
 text = "||"
+
+[node name="Sprite2D" type="Sprite2D" parent="ScoreUI"]
+position = Vector2(394, 18)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_dg77c")
 
 [node name="Player" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0xm2m")
@@ -395,13 +255,12 @@ layer = -100
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(233, 407)
-scale = Vector2(0.55, 0.55)
 texture = ExtResource("11_efxa6")
 
-[connection signal="pressed" from="GameOverUI/Button (Restart)" to="GameOverUI" method="_on_button_restart_pressed"]
-[connection signal="pressed" from="GameOverUI/Button (Menu)" to="GameOverUI" method="_on_button_menu_pressed"]
-[connection signal="pressed" from="PauseUI/Button (Continue)" to="PauseUI" method="_on_button_continue_pressed"]
-[connection signal="pressed" from="PauseUI/Button (Restart)" to="PauseUI" method="_on_button_restart_pressed"]
-[connection signal="pressed" from="PauseUI/Button (Options)" to="PauseUI" method="_on_button_options_pressed"]
-[connection signal="pressed" from="PauseUI/Button (Menu)" to="PauseUI" method="_on_button_menu_pressed"]
+[connection signal="pressed" from="GameOverUI/Button_Restart" to="GameOverUI" method="_on_button_restart_pressed"]
+[connection signal="pressed" from="GameOverUI/Button_Menu" to="GameOverUI" method="_on_button_menu_pressed"]
+[connection signal="pressed" from="PauseUI/Button_Menu" to="PauseUI" method="_on_button_menu_pressed"]
+[connection signal="pressed" from="PauseUI/Button_Restart" to="PauseUI" method="_on_button_restart_pressed"]
+[connection signal="pressed" from="PauseUI/Button_Continue" to="PauseUI" method="_on_button_continue_pressed"]
+[connection signal="pressed" from="PauseUI/Button_Options" to="PauseUI" method="_on_button_options_pressed"]
 [connection signal="pressed" from="ScoreUI/Button (Pause)" to="." method="_on_button_pause_pressed"]

@@ -31,7 +31,7 @@ func _process(delta):
 
 	var main = get_tree().get_root().get_node("Main")
 	if main:
-		$CoinsTotalLabel.text = "Coins: " + str(coins_total)
+		$CoinsTotalLabel.text = "" + str(coins_total)
 
 func load_highscore():
 	if FileAccess.file_exists("user://highscore.save"):

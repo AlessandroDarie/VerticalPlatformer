@@ -1,6 +1,7 @@
-res://BasePlatform.tscn::ff1e4504c98b626652b49d0ccc463b93::1745774150::res://.godot/exported/133200997/export-ffac53942fc8c46920e5b64952a24a3e-BasePlatform.scn
-res://Coin.tscn::1371c89ba2a2bd704d1f742a04cf762b::1745774150::res://.godot/exported/133200997/export-0b664727d705d3239c5249eb228b933f-Coin.scn
-res://laser.tscn::b864374c59fed48cd940c553de672dd6::1745774150::res://.godot/exported/133200997/export-b21fafe43ac97fc1dd338bca39523f0b-laser.scn
-res://main.tscn::001c444cab0ac05c09a64d851915d012::1745774150::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
-res://platform.tscn::4e50152f7008a512520011b1abf94062::1745774150::res://.godot/exported/133200997/export-991b5dfe9c806159464ca619fc6762df-platform.scn
-res://main_menu.tscn::bf5dfca2aefb23482ed15dc874547b4a::1745774150::res://.godot/exported/133200997/export-8b03550a1e82db90fe95208a9e9dbb82-main_menu.scn
+res://BasePlatform.tscn::ff1e4504c98b626652b49d0ccc463b93::1745832531::res://.godot/exported/133200997/export-ffac53942fc8c46920e5b64952a24a3e-BasePlatform.scn
+res://Coin.tscn::79a44798b528e11be8328cf5ac23f346::1745832532::res://.godot/exported/133200997/export-0b664727d705d3239c5249eb228b933f-Coin.scn
+res://laser.tscn::b864374c59fed48cd940c553de672dd6::1745832532::res://.godot/exported/133200997/export-b21fafe43ac97fc1dd338bca39523f0b-laser.scn
+res://main.tscn::ce982ec2f030842804e569094b5bbe44::1745832531::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+res://platform.tscn::4e50152f7008a512520011b1abf94062::1745832531::res://.godot/exported/133200997/export-991b5dfe9c806159464ca619fc6762df-platform.scn
+res://main_menu.tscn::ecaf4ec76372a9698e003e6ca3c99079::1745832532::res://.godot/exported/133200997/export-8b03550a1e82db90fe95208a9e9dbb82-main_menu.scn
+res://ButtonBase.tscn::24ff885529f05c235fac2f102064d0b5::1745832603::res://.godot/exported/133200997/export-e086bb9efe8635ebf067610770f5d83e-ButtonBase.scn
