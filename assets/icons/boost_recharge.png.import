@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u7metbx4sip8"
-path="res://.godot/imported/wide_platforms_128x128.png-7cf4db5f149644395581d1240b279231.ctex"
+uid="uid://b5hofk18kyw7q"
+path="res://.godot/imported/boost_recharge.png-c919cc00f1db2d4d3989d7701390e420.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/wide_platforms_128x128.png"
-dest_files=["res://.godot/imported/wide_platforms_128x128.png-7cf4db5f149644395581d1240b279231.ctex"]
+source_file="res://assets/icons/boost_recharge.png"
+dest_files=["res://.godot/imported/boost_recharge.png-c919cc00f1db2d4d3989d7701390e420.ctex"]
 
 [params]
 

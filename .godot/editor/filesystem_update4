@@ -10,3 +10,8 @@ res://skills_menu.tscn
 res://skill.tscn
 res://PauseUI.gd
 res://GameOverUI.gd
+res://Managers/VolumeManager.gd
+res://Data/skills_data.gd
+res://skills_menu.gd
+res://Skill.gd
+res://skills/SkillsData.gd

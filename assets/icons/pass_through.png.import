@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckwaiiw2b7vc1"
-path="res://.godot/imported/coin_reach_128x128.png-bdefaacb7152a3b7d8fce9194eebda50.ctex"
+uid="uid://mxcc823f2vc4"
+path="res://.godot/imported/pass_through.png-bce21c253497dd5e16339b823d97c97a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/coin_reach_128x128.png"
-dest_files=["res://.godot/imported/coin_reach_128x128.png-bdefaacb7152a3b7d8fce9194eebda50.ctex"]
+source_file="res://assets/icons/pass_through.png"
+dest_files=["res://.godot/imported/pass_through.png-bce21c253497dd5e16339b823d97c97a.ctex"]
 
 [params]
 

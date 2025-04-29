@@ -16,8 +16,8 @@ static func _adjust_audio_volume(root: Node, tag: String, value: float) -> void:
 static func _set_volume_recursive(node: Node, tag: String, value: float) -> void:
 	if node is AudioStreamPlayer or node is AudioStreamPlayer2D:
 		if node.name.to_lower().begins_with(tag):
-			if value <= -95.0:
-				node.volume_db = -100.0
+			if value <= -59.0:
+				node.volume_db = -60.0
 				node.stream_paused = true 
 			else:
 				node.stream_paused = false

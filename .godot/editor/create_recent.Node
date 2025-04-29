@@ -1,3 +1,4 @@
+AudioStreamPlayer
 ColorRect
 Control
 MarginContainer
@@ -5,7 +6,6 @@ Button
 Label
 TextureRect
 HBoxContainer
-AudioStreamPlayer
 Sprite2D
 Node2D
 Polygon2D

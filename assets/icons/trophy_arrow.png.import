@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdobkqioheplf"
-path="res://.godot/imported/coin_crowned_128x128.png-d9185ce319fe3c117a0c647572ee4d85.ctex"
+uid="uid://kvvb474t6iti"
+path="res://.godot/imported/trophy_arrow.png-eb40790f379a15014d030a4a6257ffed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/coin_crowned_128x128.png"
-dest_files=["res://.godot/imported/coin_crowned_128x128.png-d9185ce319fe3c117a0c647572ee4d85.ctex"]
+source_file="res://assets/icons/trophy_arrow.png"
+dest_files=["res://.godot/imported/trophy_arrow.png-eb40790f379a15014d030a4a6257ffed.ctex"]
 
 [params]
 

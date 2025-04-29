@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4unhf4x14ppm"
-path="res://.godot/imported/boost_recharge_128x128.png-be6799ff403aed1ba521087f183f664a.ctex"
+uid="uid://b3n1p2iycasjt"
+path="res://.godot/imported/gravity_resistance.png-7c5611f198eabb9121eb83bb0f642093.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/boost_recharge_128x128.png"
-dest_files=["res://.godot/imported/boost_recharge_128x128.png-be6799ff403aed1ba521087f183f664a.ctex"]
+source_file="res://assets/icons/gravity_resistance.png"
+dest_files=["res://.godot/imported/gravity_resistance.png-7c5611f198eabb9121eb83bb0f642093.ctex"]
 
 [params]
 

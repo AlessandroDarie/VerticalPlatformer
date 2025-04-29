@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct2thiwrmrmo8"
-path="res://.godot/imported/speed_up_128x128.png-2afcf263fc169806fcf2a5144cf4fe6e.ctex"
+uid="uid://c0vot2lhutex7"
+path="res://.godot/imported/falling_coins.png-646b6fba7427094075f07801127261cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/speed_up_128x128.png"
-dest_files=["res://.godot/imported/speed_up_128x128.png-2afcf263fc169806fcf2a5144cf4fe6e.ctex"]
+source_file="res://assets/icons/falling_coins.png"
+dest_files=["res://.godot/imported/falling_coins.png-646b6fba7427094075f07801127261cc.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bho3hmen5oy3v"
-path="res://.godot/imported/platform_speed_control_128x128.png-947f5b767108174fe0db91e1f7a9a668.ctex"
+uid="uid://67atk6yq4j5i"
+path="res://.godot/imported/turtle_neon.png-ae8c18b87095b9095110e5a110b08c8c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/platform_speed_control_128x128.png"
-dest_files=["res://.godot/imported/platform_speed_control_128x128.png-947f5b767108174fe0db91e1f7a9a668.ctex"]
+source_file="res://assets/icons/turtle_neon.png"
+dest_files=["res://.godot/imported/turtle_neon.png-ae8c18b87095b9095110e5a110b08c8c.ctex"]
 
 [params]
 

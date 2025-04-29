@@ -43,32 +43,32 @@ text = "Game Over"
 horizontal_alignment = 1
 
 [node name="Button_Restart" parent="GameOverUI" instance=ExtResource("3_ycdy4")]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -196.5
-offset_top = 250.0
+offset_top = -150.0
 offset_right = -43.5
-offset_bottom = 307.0
+offset_bottom = -93.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 text = "Restart
 "
 
 [node name="Button_Menu" parent="GameOverUI" instance=ExtResource("3_ycdy4")]
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = 43.5
-offset_top = 250.0
+offset_top = -150.0
 offset_right = 196.5
-offset_bottom = 307.0
+offset_bottom = -93.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 text = "Menu
 "
 
@@ -92,52 +92,49 @@ theme_override_font_sizes/font_size = 48
 text = "Paused"
 horizontal_alignment = 1
 
-[node name="Button_Menu" parent="PauseUI" instance=ExtResource("3_ycdy4")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 43.5
-offset_top = 250.0
-offset_right = 196.5
-offset_bottom = 307.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Menu
-"
-
-[node name="Button_Restart" parent="PauseUI" instance=ExtResource("3_ycdy4")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -196.5
-offset_top = 250.0
-offset_right = -43.5
-offset_bottom = 307.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Restart
-"
-
 [node name="Button_Continue" parent="PauseUI" instance=ExtResource("3_ycdy4")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 160.0
-offset_top = -320.0
-offset_right = 192.0
-offset_bottom = -269.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 80.0
+offset_right = -48.0
+offset_bottom = 131.0
+grow_horizontal = 0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 20
-text = "⏵
+text = "▶
+"
+
+[node name="Button_Restart" parent="PauseUI" instance=ExtResource("3_ycdy4")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -196.5
+offset_top = -150.0
+offset_right = -43.5
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Restart
+"
+
+[node name="Button_Menu" parent="PauseUI" instance=ExtResource("3_ycdy4")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 43.5
+offset_top = -150.0
+offset_right = 196.5
+offset_bottom = -93.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Menu
 "
 
 [node name="ScoreUI" type="CanvasLayer" parent="."]
@@ -220,17 +217,14 @@ theme_override_font_sizes/font_size = 24
 text = "0"
 
 [node name="Button_Pause" parent="ScoreUI" instance=ExtResource("3_ycdy4")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 160.0
-offset_top = -320.0
-offset_right = 192.0
-offset_bottom = -269.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 80.0
+offset_right = -48.0
+offset_bottom = 131.0
+grow_horizontal = 0
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 20
@@ -308,7 +302,7 @@ texture = ExtResource("11_efxa6")
 
 [connection signal="pressed" from="GameOverUI/Button_Restart" to="GameOverUI" method="_on_button_restart_pressed"]
 [connection signal="pressed" from="GameOverUI/Button_Menu" to="GameOverUI" method="_on_button_menu_pressed"]
-[connection signal="pressed" from="PauseUI/Button_Menu" to="PauseUI" method="_on_button_menu_pressed"]
-[connection signal="pressed" from="PauseUI/Button_Restart" to="PauseUI" method="_on_button_restart_pressed"]
 [connection signal="pressed" from="PauseUI/Button_Continue" to="PauseUI" method="_on_button_continue_pressed"]
+[connection signal="pressed" from="PauseUI/Button_Restart" to="PauseUI" method="_on_button_restart_pressed"]
+[connection signal="pressed" from="PauseUI/Button_Menu" to="PauseUI" method="_on_button_menu_pressed"]
 [connection signal="pressed" from="ScoreUI/Button_Pause" to="." method="_on_button_pause_pressed"]

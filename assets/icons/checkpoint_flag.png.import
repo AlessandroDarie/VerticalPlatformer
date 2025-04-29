@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckw7xm2c2a34b"
-path="res://.godot/imported/trophy_arrow_128x128.png-afa3d67264715e5680ccab2cfadc3d5c.ctex"
+uid="uid://0ax1bkk5vxkq"
+path="res://.godot/imported/checkpoint_flag.png-0952e8f5180c4a375910e1ca89fa8756.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/trophy_arrow_128x128.png"
-dest_files=["res://.godot/imported/trophy_arrow_128x128.png-afa3d67264715e5680ccab2cfadc3d5c.ctex"]
+source_file="res://assets/icons/checkpoint_flag.png"
+dest_files=["res://.godot/imported/checkpoint_flag.png-0952e8f5180c4a375910e1ca89fa8756.ctex"]
 
 [params]
 

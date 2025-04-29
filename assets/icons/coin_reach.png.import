@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bubcu1jjvmkmc"
-path="res://.godot/imported/gravity_resistance_128x128.png-971481448d6a578f9b3a0d4a9c04075e.ctex"
+uid="uid://bpm0vavqlg881"
+path="res://.godot/imported/coin_reach.png-656fabfa4e890b89296f8e4458f066eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/gravity_resistance_128x128.png"
-dest_files=["res://.godot/imported/gravity_resistance_128x128.png-971481448d6a578f9b3a0d4a9c04075e.ctex"]
+source_file="res://assets/icons/coin_reach.png"
+dest_files=["res://.godot/imported/coin_reach.png-656fabfa4e890b89296f8e4458f066eb.ctex"]
 
 [params]
 
