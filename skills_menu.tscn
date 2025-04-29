@@ -1,0 +1,81 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmwvswjof8eyk"]
+
+[ext_resource type="Script" uid="uid://cbhgsipwyis13" path="res://skills_menu.gd" id="1_2q15i"]
+[ext_resource type="Texture2D" uid="uid://wo5whln2yknq" path="res://assets/background/background3.png" id="2_2q15i"]
+[ext_resource type="PackedScene" uid="uid://bomld5pc5iw4l" path="res://ButtonBase.tscn" id="3_1oklx"]
+[ext_resource type="PackedScene" uid="uid://lb6mfvvxg6gt" path="res://skill.tscn" id="4_2q15i"]
+
+[node name="SkillsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_2q15i")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 60.0
+offset_top = 40.0
+offset_right = 420.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 45
+text = "SKILLS MENU"
+horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(233, 407)
+texture = ExtResource("2_2q15i")
+
+[node name="Button_Menu" parent="." instance=ExtResource("3_1oklx")]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 680.5
+offset_right = 303.0
+offset_bottom = 737.5
+text = "Menu
+"
+
+[node name="Button_Next" parent="." instance=ExtResource("3_1oklx")]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 680.5
+offset_right = 413.0
+offset_bottom = 736.5
+text = "Next
+"
+
+[node name="skill_box" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 200.0
+offset_bottom = 250.0
+
+[node name="skill_box2" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 260.0
+offset_bottom = 310.0
+
+[node name="skill_box3" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 320.0
+offset_bottom = 370.0
+
+[node name="skill_box4" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 380.0
+offset_bottom = 430.0
+
+[node name="skill_box5" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 440.0
+offset_bottom = 490.0
+
+[node name="skill_box6" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 500.0
+offset_bottom = 550.0
+
+[node name="skill_box7" parent="." instance=ExtResource("4_2q15i")]
+offset_top = 560.0
+offset_bottom = 610.0
+
+[connection signal="pressed" from="Button_Menu" to="." method="_on_button_menu_pressed"]

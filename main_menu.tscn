@@ -50,14 +50,13 @@ offset_bottom = 413.0
 text = "Options
 "
 
-[node name="Button_Shop" parent="." instance=ExtResource("3_fu7sn")]
+[node name="Button_Skills" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
 offset_left = 197.5
 offset_top = 430.0
 offset_right = 282.5
 offset_bottom = 483.0
-disabled = true
-text = "Shop
+text = "Skills
 "
 
 [node name="Button_Customize" parent="." instance=ExtResource("3_fu7sn")]
@@ -81,4 +80,5 @@ text = "Quit
 
 [connection signal="pressed" from="Button_Play" to="." method="_on_button_play_pressed"]
 [connection signal="pressed" from="Button_Options" to="." method="_on_button_options_pressed"]
+[connection signal="pressed" from="Button_Skills" to="." method="_on_button_skills_pressed"]
 [connection signal="pressed" from="Button_Quit" to="." method="_on_button_quit_pressed"]
