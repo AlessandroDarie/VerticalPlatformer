@@ -7,6 +7,10 @@ var time_increment = 0.025
 var score_step = 75
 var last_steps = 0
 var max_time_scale = 3.0
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
+
+func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 
 func set_game_over():
 	is_game_over = true

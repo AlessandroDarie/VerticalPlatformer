@@ -46,7 +46,7 @@ offset_top = 350.0
 offset_right = 240.0
 offset_bottom = 400.0
 scale = Vector2(2, 2)
-min_value = -40.0
+min_value = -80.0
 max_value = 0.0
 
 [node name="MusicLabel" type="Label" parent="."]
@@ -69,7 +69,7 @@ offset_top = 500.0
 offset_right = 240.0
 offset_bottom = 550.0
 scale = Vector2(2, 2)
-min_value = -40.0
+min_value = -80.0
 max_value = 0.0
 
 [node name="Button_Back" parent="." instance=ExtResource("1_58l1r")]

@@ -6,6 +6,10 @@ extends Node2D
 var platform_gap = 750
 var last_coin_spawn_score = 0
 var coin_spawn_step = 1000
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
+
+func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 
 func on_platform_reached(current_platform_y):
 	var new_platform = platform_scene.instantiate()

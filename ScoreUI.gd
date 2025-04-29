@@ -8,7 +8,10 @@ var highscore = 0
 var coins_in_game = 0
 var coins_total = 0
 
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
+
 func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 	max_height = 0
 	load_highscore()
 	load_coins()

@@ -1,8 +1,10 @@
 extends Area2D
 
-@onready var pickup_sound = $PickupSound
+@onready var pickup_sound = $sfx_PickupSound
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
 
 func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 	connect("body_entered", Callable(self, "_on_body_entered"))
 
 func _on_body_entered(body):

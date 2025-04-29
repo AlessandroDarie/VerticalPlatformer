@@ -8,12 +8,17 @@ var is_ready_to_jump = false
 var move_left = false
 var move_right = false
 
-@onready var jump_sound = $JumpSound
-@onready var jump_sound_2 = $JumpSound2
-@onready var fall_sound = $FallSound
+@onready var jump_sound = $sfx_JumpSound
+@onready var jump_sound_2 = $sfx_JumpSound2
+@onready var fall_sound = $sfx_FallSound
 var last_jump_sound = 0
 var jump_start_y = 0.0
 var is_falling_sound_played = false
+
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
+
+func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 
 func _physics_process(delta):
 	if get_tree().get_root().get_node("Main").is_game_over:

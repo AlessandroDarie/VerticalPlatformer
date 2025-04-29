@@ -1,6 +1,8 @@
 extends CanvasLayer
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
 
 func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 	visible = false
 
 func show_game_over():

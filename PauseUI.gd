@@ -1,6 +1,9 @@
 extends CanvasLayer
 
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
+
 func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 	visible = false
 
 func show_pause():
@@ -24,7 +27,9 @@ func _on_button_restart_pressed():
 
 func _on_button_options_pressed():
 	await get_tree().create_timer(0.3).timeout
-	print("Options clicked!") # Placeholder
+	hide_pause()
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://OptionsMenu.tscn")
 
 
 func _on_button_menu_pressed():

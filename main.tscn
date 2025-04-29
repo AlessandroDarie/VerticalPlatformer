@@ -107,7 +107,6 @@ offset_left = 283.5
 offset_top = 610.0
 offset_right = 436.5
 offset_bottom = 667.0
-disabled = true
 text = "Options
 "
 
@@ -228,14 +227,14 @@ limit_left = -240
 limit_right = 240
 position_smoothing_enabled = true
 
-[node name="JumpSound" type="AudioStreamPlayer" parent="Player"]
+[node name="sfx_JumpSound" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("8_w48qg")
 
-[node name="JumpSound2" type="AudioStreamPlayer" parent="Player"]
+[node name="sfx_JumpSound2" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("9_vivmo")
 pitch_scale = 1.5
 
-[node name="FallSound" type="AudioStreamPlayer" parent="Player"]
+[node name="sfx_FallSound" type="AudioStreamPlayer" parent="Player"]
 stream = ExtResource("10_2cqfq")
 
 [node name="Platform" parent="." instance=ExtResource("1_ig7tw")]

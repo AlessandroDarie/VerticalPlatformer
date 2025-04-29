@@ -29,11 +29,11 @@ width = 3.0
 position = Vector2(240, 75)
 shape = SubResource("RectangleShape2D_oes6l")
 
-[node name="HitSound" type="AudioStreamPlayer" parent="."]
+[node name="sfx_HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_6vqwg")
 volume_db = -20.0
 
-[node name="WarningSound" type="AudioStreamPlayer" parent="."]
+[node name="sfx_WarningSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_g6b45")
 volume_db = -20.0
 

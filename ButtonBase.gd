@@ -1,8 +1,10 @@
 extends Button
 
-@onready var click_sound = $AudioStreamPlayer
+@onready var click_sound = $sfx_button
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
 
 func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 	if text == "Base":
 		text = "BASE BUTTON"
 	connect("pressed", Callable(self, "_on_button_pressed"))

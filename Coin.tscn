@@ -17,6 +17,6 @@ texture = ExtResource("2_ou7jl")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ou7jl")
 
-[node name="PickupSound" type="AudioStreamPlayer" parent="."]
+[node name="sfx_PickupSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ufda5")
 pitch_scale = 1.5

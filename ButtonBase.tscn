@@ -106,5 +106,5 @@ text = "Base
 "
 script = ExtResource("1_jl6wr")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="sfx_button" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_klqs8")

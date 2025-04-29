@@ -3,7 +3,10 @@ extends StaticBody2D
 var touched = false
 var activated = false
 
+const VolumeManager = preload("res://Managers/VolumeManager.gd")
+
 func _ready():
+	VolumeManager.load_volume_settings(get_tree().get_root())
 	$Area2D.connect("body_entered", Callable(self, "_on_area2d_body_entered"))
 	await get_tree().create_timer(0.1).timeout
 	activated = true
