@@ -21,6 +21,7 @@ boot_splash/size/viewport_width=1152
 
 window/size/viewport_width=480
 window/size/viewport_height=800
+window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_width"
 window/handheld/orientation=1

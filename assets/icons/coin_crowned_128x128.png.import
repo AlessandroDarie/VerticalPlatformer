@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfrihb281ulwd"
-path="res://.godot/imported/gravity_resistance.png-7c5611f198eabb9121eb83bb0f642093.ctex"
+uid="uid://bdobkqioheplf"
+path="res://.godot/imported/coin_crowned_128x128.png-d9185ce319fe3c117a0c647572ee4d85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/gravity_resistance.png"
-dest_files=["res://.godot/imported/gravity_resistance.png-7c5611f198eabb9121eb83bb0f642093.ctex"]
+source_file="res://assets/icons/coin_crowned_128x128.png"
+dest_files=["res://.godot/imported/coin_crowned_128x128.png-d9185ce319fe3c117a0c647572ee4d85.ctex"]
 
 [params]
 

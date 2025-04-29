@@ -6,17 +6,25 @@
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_06t4h")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 60.0
-offset_top = 40.0
-offset_right = 420.0
-offset_bottom = 85.0
+offset_left = -125.5
+offset_top = -340.0
+offset_right = 165.5
+offset_bottom = -211.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 1, 1, 1)
 theme_override_constants/outline_size = 6
@@ -34,47 +42,47 @@ texture = ExtResource("2_7vrkn")
 
 [node name="Button_Play" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 290.0
-offset_right = 276.0
-offset_bottom = 343.0
+offset_left = -16.0
+offset_top = -100.0
+offset_right = 56.0
+offset_bottom = -47.0
 text = "Play
 "
 
 [node name="Button_Options" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
-offset_left = 175.0
-offset_top = 360.0
-offset_right = 305.0
-offset_bottom = 413.0
+offset_left = -45.0
+offset_top = -30.0
+offset_right = 85.0
+offset_bottom = 23.0
 text = "Options
 "
 
 [node name="Button_Skills" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
-offset_left = 197.5
-offset_top = 430.0
-offset_right = 282.5
-offset_bottom = 483.0
+offset_left = -22.5
+offset_top = 40.0
+offset_right = 62.5
+offset_bottom = 93.0
 text = "Skills
 "
 
 [node name="Button_Customize" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
-offset_left = 155.0
-offset_top = 500.0
-offset_right = 325.0
-offset_bottom = 553.0
+offset_left = -65.0
+offset_top = 110.0
+offset_right = 105.0
+offset_bottom = 163.0
 disabled = true
 text = "Customize
 "
 
 [node name="Button_Quit" parent="." instance=ExtResource("3_fu7sn")]
 layout_mode = 0
-offset_left = 204.0
-offset_top = 700.0
-offset_right = 279.0
-offset_bottom = 753.0
+offset_left = -17.5
+offset_top = 340.0
+offset_right = 57.5
+offset_bottom = 393.0
 text = "Quit
 "
 

@@ -1,12 +1,12 @@
-res://skills_menu.tscn
-res://skill.tscn
-res://main_menu.tscn
-res://MainMenu.gd
 res://ButtonBase.tscn
 res://platform.tscn
 res://BasePlatform.tscn
 res://laser.tscn
 res://Coin.tscn
 res://main.tscn
+res://main_menu.tscn
 res://OptionsMenu.tscn
-res://skills_menu.gd
+res://skills_menu.tscn
+res://skill.tscn
+res://PauseUI.gd
+res://GameOverUI.gd
